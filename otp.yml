@@ -1,0 +1,30 @@
+--- # otp secrets...
+#otpauth://totp/GitHub:michel47?secret=...&digits=7
+myauth:
+  issuer: Radiant
+  label: "my auth"
+  digits: 8
+  period: 37
+  #digest: 'Digest::SHA'
+  algorithm: 'SHA256'
+  modulus: 1000
+  cipher: 'c2NyeXB0AA0AAAAIAAAAAcC1HDNXSI3cXGX2xYIM1Te1PkZxuGnSvoM5PMV8XpAIsINcLoCeHy+g5WK4U8H0yO2vJB6d6IYavvu6S6uiRPs//FjGag++g/+aKA0HwTZCcHAF7fHklZeYVhaaE86OGGhGflcrDjs0G+XmcmiPB4KvVAe5TCPeLrDpytvloapw'
+github:
+  issuer: GitHub
+  digits: 6
+  timestep: 30
+  digest: 'Digest::SHA'
+  cipher: 'c2NyeXB0AAwAAAAIAAAAARedm640jOUahPbUsyVeoSLUkfl6KYkhbZTiNcJxwvpxyC/tJCuCDPxVsyXBlaTDG1ENk0v/p5G8ymSMSuajQ1NqO4muadaz8T01BfG8rp3DEVqEJKLY8lPSTXOS6nO7gmqBrY/FI0IiBxutsWEVUqhHOqc5s4uaWuiz'
+meet:
+  issuer: SimplyMeet.me
+  cipher: 'c2NyeXB0AA0AAAAIAAAAAdwxQXr7lva0Q6uIwxzLqjfcFgTDLAXy0Mwv+OlLRRIWWCOitsiezye16NLVZ2iZNVj1MJg8GhB8VU5U4kp7l1LWY0DMa+ImzJaFh4s/XDF52IuHc+BYiSLBPjN4bFoLMZQiaaxQqCKzJK1wgstUSWHfhLQpMuTyWBc2'
+  account: mgcombes@gmail.com
+test:
+  issuer: RFC-6238
+  secret: '12345678901234567890'
+  digits: 8
+  timestep: 30
+  epoch: 0
+  digest: 'Digest::SHA1'
+# $! echo "... \# \$Source: /ipfs/$(ipfs add -w % -Q)/%:t \$"
+... # $Source: /ipfs/QmY1189e5MqUDMh7E1FV6dQAZqLpDmGg4HHz5gHhkf3mKX/otp.yml $

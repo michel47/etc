@@ -1,5 +1,5 @@
 #!/usr/bin/env QMLIB=${qmlib} perl
-BEGIN { if (__FILE__ eq $0) && defined $ENV{QMLIB} && -d "/ipfs/$ENV{QMLIB}"; { require lib; lib->import("/ipfs/$ENV{QMLIB}"); } }
+BEGIN { if (__FILE__ eq $0 && defined $ENV{QMLIB} && -d "$ENV{XDG_CACHE_HOME}/qmlib/$ENV{QMLIB}") { require lib; lib->import("$ENV{XDG_CACHE_HOME}/qmlib/$ENV{QMLIB}"); } }
 # 1! echo "\#\!/usr/bin/env QMLIB=$(cd $RADIANT 1>/dev/null; rm~ 1>/dev/null; ipfs add -r lib -Q) perl"
 # --------------------------------------------------------------------------------------------
 # $Intent: act in Pure Kindness $
@@ -17,12 +17,10 @@ BEGIN { if (__FILE__ eq $0) && defined $ENV{QMLIB} && -d "/ipfs/$ENV{QMLIB}"; { 
 
 # libraries:
 # ----------
-# .+1! echo "use lib '/ipfs/$(cd $RADIANT 1>/dev/null; rm~ 1>/dev/null; ipfs add -r lib -Q)';"
+# .+1! echo "use lib \"\$ENV{XDG_CACHE_HOME}/qmlib/$(cd $RADIANT 1>/dev/null; rm~ 1>/dev/null; ipfs add -r lib -Q)\";"
 #use lib "/ipfs/$ENV{QMLIB}";
 # export QMLIB=$(ipfs add -w $RADIANT/lib/*.pm -Q)
-# export QMLIB='${qmlib}'; # ${kname} ${kemoji}
-#use lib "$ENV{RADIANT}/lib";
-
-# use lib "$ENV{SITE}/lib";
+# $ENV{QMLIB} = '${qmlib}'; # ${kname} ${kemoji}
+use lib "$ENV{RADIANT}/lib";
 # .-1! echo " use lib '/ipfs/$(cd SWPoC 1>/dev/null; ipfs add -w lib/keys.pm -Q)';"
 # --------------------------------------------------------------------------------------------
